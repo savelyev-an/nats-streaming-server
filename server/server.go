@@ -1730,7 +1730,7 @@ func RunServerWithOpts(stanOpts *Options, natsOpts *server.Options) (newServer *
 		subStartCh:    make(chan *subStartInfo, defaultSubStartChanLen),
 		subStartQuit:  make(chan struct{}, 1),
 		startTime:     time.Now(),
-		log:           logger.NewStanLogger(),
+		log:           logger.NewStanLogger(sOpts.Clustering.NodeID),
 		shutdownCh:    make(chan struct{}),
 		isClustered:   sOpts.Clustering.Clustered,
 		raftLogging:   sOpts.Clustering.RaftLogging,

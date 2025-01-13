@@ -1,4 +1,8 @@
-# NATS Streaming Server
+# TEST NATS Streaming Server/Cluster
+
+# FORK OF NATS STREAMING SERVER WITH EXTRA FUNCTIONALITY
+- extra public methods for changing leader at cluster
+- running cluster as a code 
 
 NATS Streaming is an extremely performant, lightweight reliable streaming platform built on [NATS](https://nats.io).
 

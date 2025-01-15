@@ -5928,3 +5928,21 @@ func (s *StanServer) Shutdown() {
 	// Wait for go-routines to return
 	s.wg.Wait()
 }
+
+func (s *StanServer) RaftLeader() (raft.ServerAddress, raft.ServerID) {
+	return s.raft.LeaderWithID()
+}
+
+func (s *StanServer) RaftStepDown() error {
+	if s == nil {
+		return nil
+	}
+	s.log.Debugf("RaftStepDown: call LeadershipTransfer")
+	f := s.raft.LeadershipTransfer()
+	err := f.Error()
+	if err != nil {
+		err = fmt.Errorf("called LeadershipTransfer: %w", err)
+		s.log.Errorf(err.Error())
+	}
+	return err
+}

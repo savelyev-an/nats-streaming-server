@@ -74,7 +74,7 @@ var (
 
 func init() {
 	// Create an empty logger (no actual logger is set without calling SetLogger())
-	testLogger = logger.NewStanLogger()
+	testLogger = logger.NewStanLogger("TEST")
 }
 
 // Used by both testing.B and testing.T so need to use

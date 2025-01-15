@@ -175,7 +175,7 @@ func init() {
 	// For FT tests, reduce the HB/Timeout intervals
 	setFTTestsHBInterval()
 	// Dummy/no-op Logger
-	testLogger = logger.NewStanLogger()
+	testLogger = logger.NewStanLogger("TEST")
 	// Make the server interpret all our sub's AckWait() as milliseconds instead
 	// of seconds.
 	testAckWaitIsInMillisecond = true

@@ -69,7 +69,7 @@ func (d *dummyLogger) Reset() {
 }
 
 func TestLogger(t *testing.T) {
-	logger := NewStanLogger()
+	logger := NewStanLogger("TEST")
 
 	check := func(log Logger, logtime, debug, trace bool, logfile string) {
 		logger.mu.RLock()

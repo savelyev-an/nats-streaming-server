@@ -31,21 +31,24 @@ type Logger natsd.Logger
 // StanLogger is the logger used in this project and implements
 // the Logger interface.
 type StanLogger struct {
-	mu    sync.RWMutex
-	ns    *natsd.Server
-	debug bool
-	trace bool
-	ltime bool
-	lfile string
-	fszl  int64
-	ndbg  bool
-	ntrc  bool
-	log   natsd.Logger
+	mu       sync.RWMutex
+	ns       *natsd.Server
+	debug    bool
+	trace    bool
+	ltime    bool
+	lfile    string
+	fszl     int64
+	ndbg     bool
+	ntrc     bool
+	log      natsd.Logger
+	serverID string
 }
 
 // NewStanLogger returns an instance of StanLogger
-func NewStanLogger() *StanLogger {
-	return &StanLogger{}
+func NewStanLogger(serverID string) *StanLogger {
+	return &StanLogger{
+		serverID: serverID,
+	}
 }
 
 // SetLogger sets the logger, debug and trace
@@ -205,6 +208,6 @@ func (s *StanLogger) executeLogCall(f func(logger Logger, format string, v ...in
 		s.mu.Unlock()
 		return
 	}
-	f(s.log, LogPrefix+format, args...)
+	f(s.log, LogPrefix+s.serverID+": "+format, args...)
 	s.mu.Unlock()
 }

@@ -16,8 +16,8 @@ package stores
 import (
 	"sync"
 
-	"github.com/nats-io/nats-streaming-server/logger"
-	"github.com/nats-io/nats-streaming-server/spb"
+	"github.com/savelyev-an/nats-streaming-server/logger"
+	"github.com/savelyev-an/nats-streaming-server/spb"
 )
 
 // RaftStore is an hybrid store for server running in clustering mode.

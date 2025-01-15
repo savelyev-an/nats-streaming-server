@@ -18,10 +18,10 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/nats-io/nats-streaming-server/spb"
-	"github.com/nats-io/nats-streaming-server/stores"
-	"github.com/nats-io/nats-streaming-server/util"
 	"github.com/nats-io/nats.go"
+	"github.com/savelyev-an/nats-streaming-server/spb"
+	"github.com/savelyev-an/nats-streaming-server/stores"
+	"github.com/savelyev-an/nats-streaming-server/util"
 )
 
 // FT constants

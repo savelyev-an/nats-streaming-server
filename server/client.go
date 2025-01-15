@@ -18,8 +18,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/nats-io/nats-streaming-server/spb"
-	"github.com/nats-io/nats-streaming-server/stores"
+	"github.com/savelyev-an/nats-streaming-server/spb"
+	"github.com/savelyev-an/nats-streaming-server/stores"
 )
 
 const (

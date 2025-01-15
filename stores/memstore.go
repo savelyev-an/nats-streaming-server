@@ -18,9 +18,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/nats-io/nats-streaming-server/logger"
-	"github.com/nats-io/nats-streaming-server/util"
 	"github.com/nats-io/stan.go/pb"
+	"github.com/savelyev-an/nats-streaming-server/logger"
+	"github.com/savelyev-an/nats-streaming-server/util"
 )
 
 // MemoryStore is a factory for message and subscription stores.

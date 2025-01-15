@@ -21,12 +21,12 @@ import (
 	"time"
 
 	natsdTest "github.com/nats-io/nats-server/v2/test"
-	"github.com/nats-io/nats-streaming-server/spb"
-	"github.com/nats-io/nats-streaming-server/stores"
 	"github.com/nats-io/nats.go"
 	"github.com/nats-io/nuid"
 	"github.com/nats-io/stan.go"
 	"github.com/nats-io/stan.go/pb"
+	"github.com/savelyev-an/nats-streaming-server/spb"
+	"github.com/savelyev-an/nats-streaming-server/stores"
 )
 
 func TestSubscribeShrink(t *testing.T) {

@@ -17,8 +17,8 @@ import (
 	"errors"
 	"time"
 
-	"github.com/nats-io/nats-streaming-server/spb"
 	"github.com/nats-io/stan.go/pb"
+	"github.com/savelyev-an/nats-streaming-server/spb"
 )
 
 const (

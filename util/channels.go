@@ -17,8 +17,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/nats-io/nats-streaming-server/spb"
 	"github.com/nats-io/nats.go"
+	"github.com/savelyev-an/nats-streaming-server/spb"
 )
 
 // Number of bytes used to encode a channel name

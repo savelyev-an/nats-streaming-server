@@ -23,12 +23,12 @@ import (
 
 	natsd "github.com/nats-io/nats-server/v2/server"
 	natsdTest "github.com/nats-io/nats-server/v2/test"
-	"github.com/nats-io/nats-streaming-server/spb"
-	"github.com/nats-io/nats-streaming-server/stores"
-	"github.com/nats-io/nats-streaming-server/util"
 	"github.com/nats-io/nats.go"
 	"github.com/nats-io/stan.go"
 	"github.com/nats-io/stan.go/pb"
+	"github.com/savelyev-an/nats-streaming-server/spb"
+	"github.com/savelyev-an/nats-streaming-server/stores"
+	"github.com/savelyev-an/nats-streaming-server/util"
 )
 
 func setPartitionsVarsForTest() {

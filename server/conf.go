@@ -23,8 +23,8 @@ import (
 
 	"github.com/nats-io/nats-server/v2/conf"
 	natsd "github.com/nats-io/nats-server/v2/server"
-	"github.com/nats-io/nats-streaming-server/stores"
-	"github.com/nats-io/nats-streaming-server/util"
+	"github.com/savelyev-an/nats-streaming-server/stores"
+	"github.com/savelyev-an/nats-streaming-server/util"
 )
 
 func init() {

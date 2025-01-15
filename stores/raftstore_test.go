@@ -20,7 +20,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/nats-io/nats-streaming-server/spb"
+	"github.com/savelyev-an/nats-streaming-server/spb"
 )
 
 var testRSDefaultDatastore string

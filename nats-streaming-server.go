@@ -22,11 +22,11 @@ import (
 	"runtime"
 
 	natsd "github.com/nats-io/nats-server/v2/server"
-	stand "github.com/nats-io/nats-streaming-server/server"
+	stand "github.com/savelyev-an/nats-streaming-server/server"
 
-	_ "github.com/go-sql-driver/mysql"                              // mysql driver
-	_ "github.com/lib/pq"                                           // postgres driver
-	_ "github.com/nats-io/nats-streaming-server/stores/pqdeadlines" // wrapper for postgres that gives read/write deadlines
+	_ "github.com/go-sql-driver/mysql"                                  // mysql driver
+	_ "github.com/lib/pq"                                               // postgres driver
+	_ "github.com/savelyev-an/nats-streaming-server/stores/pqdeadlines" // wrapper for postgres that gives read/write deadlines
 )
 
 var usageStr = `

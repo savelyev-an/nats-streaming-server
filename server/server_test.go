@@ -30,17 +30,17 @@ import (
 
 	natsd "github.com/nats-io/nats-server/v2/server"
 	natsdTest "github.com/nats-io/nats-server/v2/test"
-	"github.com/nats-io/nats-streaming-server/logger"
-	"github.com/nats-io/nats-streaming-server/stores"
-	"github.com/nats-io/nats-streaming-server/test"
 	"github.com/nats-io/nats.go"
 	"github.com/nats-io/nuid"
 	"github.com/nats-io/stan.go"
 	"github.com/nats-io/stan.go/pb"
+	"github.com/savelyev-an/nats-streaming-server/logger"
+	"github.com/savelyev-an/nats-streaming-server/stores"
+	"github.com/savelyev-an/nats-streaming-server/test"
 
-	_ "github.com/go-sql-driver/mysql"                              // mysql driver
-	_ "github.com/lib/pq"                                           // postgres driver
-	_ "github.com/nats-io/nats-streaming-server/stores/pqdeadlines" // wrapper for postgres that gives read/write deadlines
+	_ "github.com/go-sql-driver/mysql"                                  // mysql driver
+	_ "github.com/lib/pq"                                               // postgres driver
+	_ "github.com/savelyev-an/nats-streaming-server/stores/pqdeadlines" // wrapper for postgres that gives read/write deadlines
 )
 
 const (

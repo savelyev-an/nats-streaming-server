@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/raft"
 	natsd "github.com/nats-io/nats-server/v2/server"
 
-	stand "github.com/nats-io/nats-streaming-server/server"
+	stand "github.com/savelyev-an/nats-streaming-server/server"
 )
 
 type StanServer struct {

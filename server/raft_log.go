@@ -22,8 +22,8 @@ import (
 
 	"github.com/hashicorp/go-msgpack/v2/codec"
 	"github.com/hashicorp/raft"
-	"github.com/nats-io/nats-streaming-server/logger"
-	"github.com/nats-io/nats-streaming-server/stores"
+	"github.com/savelyev-an/nats-streaming-server/logger"
+	"github.com/savelyev-an/nats-streaming-server/stores"
 	bolt "go.etcd.io/bbolt"
 )
 

@@ -24,7 +24,7 @@ import (
 	"testing"
 
 	"github.com/hashicorp/raft"
-	"github.com/nats-io/nats-streaming-server/stores"
+	"github.com/savelyev-an/nats-streaming-server/stores"
 )
 
 func createTestRaftLog(t tLogger, opts *Options) *raftLog {

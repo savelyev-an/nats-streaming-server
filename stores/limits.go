@@ -17,7 +17,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/nats-io/nats-streaming-server/util"
+	"github.com/savelyev-an/nats-streaming-server/util"
 )
 
 // Used for display of limits

@@ -1,4 +1,4 @@
-module github.com/nats-io/nats-streaming-server
+module github.com/savelyev-an/nats-streaming-server
 
 go 1.20
 

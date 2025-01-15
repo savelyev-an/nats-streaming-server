@@ -25,13 +25,13 @@ import (
 	"testing"
 	"time"
 
-	"github.com/nats-io/nats-streaming-server/spb"
-	"github.com/nats-io/nats-streaming-server/test"
 	"github.com/nats-io/stan.go/pb"
+	"github.com/savelyev-an/nats-streaming-server/spb"
+	"github.com/savelyev-an/nats-streaming-server/test"
 
-	mysql "github.com/go-sql-driver/mysql"                          // mysql driver
-	_ "github.com/lib/pq"                                           // postgres driver
-	_ "github.com/nats-io/nats-streaming-server/stores/pqdeadlines" // wrapper for postgres that gives read/write deadlines
+	mysql "github.com/go-sql-driver/mysql"                              // mysql driver
+	_ "github.com/lib/pq"                                               // postgres driver
+	_ "github.com/savelyev-an/nats-streaming-server/stores/pqdeadlines" // wrapper for postgres that gives read/write deadlines
 )
 
 // The SourceAdmin is used by the test setup to have access

@@ -5946,3 +5946,24 @@ func (s *StanServer) RaftStepDown() error {
 	}
 	return err
 }
+
+func (s *StanServer) GetConfiguration() []raft.Server {
+	cfgFuture := s.raft.GetConfiguration()
+	cfg := cfgFuture.Configuration()
+	return cfg.Servers
+}
+
+func (s *StanServer) RaftStepDownToServer(srv raft.Server) error {
+	if s == nil {
+		return nil
+	}
+	s.log.Debugf("RaftStepDown: call LeadershipTransfer")
+	f := s.raft.LeadershipTransferToServer(srv.ID, srv.Address)
+	err := f.Error()
+	if err != nil {
+		err = fmt.Errorf("called LeadershipTransfer: %w", err)
+		s.log.Errorf(err.Error())
+	}
+
+	return err
+}

@@ -32,15 +32,31 @@ func (c *StanCluster) Shutdown() {
 
 func (c *StanCluster) RaftStepDown() error {
 	s := c.srvrs[c.serverIDs[0]]
+	srvrs := s.GetConfiguration()
 	_, leaderID := s.RaftLeader()
+	var newLeader raft.Server
+	if leaderID != srvrs[0].ID {
+		newLeader = srvrs[0]
+	} else {
+		newLeader = srvrs[1]
+	}
 	leaderSRV := c.srvrs[leaderID]
-	return leaderSRV.RaftStepDown()
+	if leaderSRV == nil {
+		return fmt.Errorf("not found leader by id: %q", leaderID)
+	}
+	fmt.Printf("raft.step_down: oldLeader: %s, new pretendent: %v\n", leaderID, newLeader)
+	return leaderSRV.RaftStepDownToServer(newLeader)
 }
 
 func (c *StanCluster) GetLeaderID() raft.ServerID {
 	s := c.srvrs[c.serverIDs[0]]
 	_, leaderID := s.RaftLeader()
 	return leaderID
+}
+
+func (c *StanCluster) GetLeaderNatsUrl() string {
+	leaderID := c.GetLeaderID()
+	return fmt.Sprintf("nats://127.0.0.1:%d", c.srvrs[leaderID].nOtps.Port)
 }
 
 func NewCluster(configPaths []string) StanCluster {

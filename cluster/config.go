@@ -103,7 +103,7 @@ streaming: {
     raft_logging: true
 	log_path: "{{.DataPath}}/raft/{{.NodePrefix}}-{{.NodeChar}}"
     raft_heartbeat_timeout: "1s"
-    raft_election_timeout: "1s"
+    raft_election_timeout: "5s"
     raft_lease_timeout: "500ms"
     raft_commit_timeout: "50ms"
   }
